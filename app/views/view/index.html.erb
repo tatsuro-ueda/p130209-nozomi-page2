@@ -1,0 +1,19 @@
+<h1>Listing pages</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @pages.each do |page| %>
+      <tr>
+        <td><%= page.title %></td>
+        <td><%= page.text %></td>
+        <td><%= link_to 'Show', controller: "view", action: "show", id: page.id %></td>
+      </tr>
+  <% end %>
+</table>
