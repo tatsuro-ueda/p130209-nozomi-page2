@@ -43,3 +43,4 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem "paperclip", "~> 3.0" # added at 130209 by weed
+gem 'aws-sdk' # added at 130209 by weed
