@@ -1,9 +1,8 @@
-<h1>Listing pages</h1>
+<h1>のぞみページ2</h1>
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>タイトル</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,8 +11,7 @@
   <% @pages.each do |page| %>
       <tr>
         <td><%= page.title %></td>
-        <td><%= page.text %></td>
-        <td><%= link_to 'Show', controller: "view", action: "show", id: page.id %></td>
+        <td><%= link_to 'みる', controller: "view", action: "show", id: page.id %></td>
       </tr>
   <% end %>
 </table>

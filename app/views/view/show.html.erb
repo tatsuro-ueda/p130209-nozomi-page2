@@ -1,18 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
+  <b>タイトル：</b>
   <%= @page.title %>
 </p>
 
 <p>
-  <b>Text:</b>
+  <b>せつめい：</b>
   <%= @page.text %>
 </p>
 
 <p>
-  <b>Image:</b>
   <%= image_tag @page.image.url %>
 </p>
 
-<%= link_to 'Back', pages_path %>
+<%= link_to 'もどる', controller: 'view', action: 'index' %>
