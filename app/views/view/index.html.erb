@@ -1,17 +1,32 @@
-<h1>のぞみページ2</h1>
+<div class="container">
 
-<table>
-  <tr>
-    <th>タイトル</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <!-- Main hero unit for a primary marketing message or call to action -->
+  <div class="hero-unit">
+    <h1>のぞみページ2</h1>
+    <p>ドキドキ・プリキュアのページです</p>
+  </div>
 
-  <% @pages.each do |page| %>
-      <tr>
-        <td><%= page.title %></td>
-        <td><%= link_to 'みる', controller: "view", action: "show", id: page.id %></td>
-      </tr>
+  <!-- Example row of columns -->
+  <% last_index = @pages.count - 1 %>
+  <% @pages.each_with_index do |page, index| %>
+    <% if index % 3 == 0 %>
+      <div class="row">
+    <% end %>
+        <div class="span4">
+          <h2><%= page.title %></h2>
+          <p><%= image_tag page.image.url %></p>
+          <p><%= page.text %></p>
+          <p><%= link_to 'みる', controller: "view", action: "show", id: page.id %></p>
+        </div>
+    <% if index % 3 == 2 or index == last_index %>
+      </div>
+    <% end %>
   <% end %>
-</table>
+
+  <hr>
+
+  <footer>
+    <p>&copy; Company 2013</p>
+  </footer>
+
+</div>
